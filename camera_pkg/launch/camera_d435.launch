@@ -1,0 +1,16 @@
+
+<launch>
+
+    <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+      <arg name="align_depth" value="true"/>
+      <arg name="initial_reset" value="true"/>
+      <arg name="enable_sync" value="true"/>
+      <arg name="filters" value="disparity,spatial,temporal,decimation"/>
+      <arg name="clip_distance" value="4.0"/>
+    </include>
+
+    <node pkg="tf2_ros" type="static_transform_publisher" name="base_to_camera_D_screw" args="0.095 0.0 0.314 0.0 0.0 0.0 base_link d435_bottom_screw_frame" />
+    <node pkg="tf2_ros" type="static_transform_publisher" name="camera_D_screw_to_camera" args="0.0 0.0175 0.0125 0.0 0.0 0.0 d435_bottom_screw_frame camera_link" />
+
+
+</launch>

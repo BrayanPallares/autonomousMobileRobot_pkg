@@ -1,0 +1,23 @@
+EBandPlannerROS:
+
+  acc_lim_x: 0.3
+  acc_lim_theta: 0.5
+
+  max_vel_x: 0.3
+  max_vel_x_backwards: 0.3
+
+  max_vel_y: 0.3
+  
+  max_vel_theta: 0.3
+  min_turning_radius: 0.0
+
+
+  max_acceleration: 0.02
+  max_translational_acceleration: 0.02
+  max_rotational_acceleration: 0.05
+
+  rotation_correction_threshold: 0.2
+
+  k_prop: 1.0
+  k_damp: 1.0
+  differential_driv: false

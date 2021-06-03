@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="robot_pkg" type ="odometry_link_publisher.py" name="odometry_link_publisher" output="screen"/>
+	<node pkg="robot_pkg" type ="camera_link_publisher.py" name="camera_link_publisher" output="screen"/>
+</launch>*
