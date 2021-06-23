@@ -33,6 +33,15 @@ roscore
 
 ## Lanzar movimiento manual del robot
 
+Convierte los datos ingresados por el Joystick y los convierte a cmd_vel.
+
+``` bash
+roslaunch robot_pkg launchJoyCmdvel.launch
+```
+
+
+## Lanzar movimiento manual del robot
+
 En el computador abordo del robot se debe lanzar el driver de movimiento:
 
 ``` bash
