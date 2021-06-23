@@ -20,6 +20,11 @@ export ROS_IP=<PC_IP>
 
 # Ejecución
 
+Se necesitan que se haya configurado el *workspace* (Se puede agregar al `~/.bashrc`), tanto en el computador como en el robot:
+``` bash
+source ~/ros/create_ws/devel/setup.bash
+```
+
 Para iniciar con la ejecucion se debe ejecutar `roscore` en el computador abordo del robot:
 
 ``` bash
