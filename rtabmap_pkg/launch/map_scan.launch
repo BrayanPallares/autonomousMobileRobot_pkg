@@ -1,0 +1,10 @@
+<launch>
+
+    <include file="$(find rtabmap_pkg)/launch/rtabmap_scan.launch">
+        <arg name="rtabmap_args" value="--delete_db_on_start"/>
+        <arg name="rtabmapviz" value="false"/>
+        <arg name="rviz" value="false"/>
+        <arg name="localization" value="false"/>
+    </include>
+
+</launch>

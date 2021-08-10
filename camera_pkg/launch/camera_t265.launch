@@ -1,13 +1,13 @@
 <launch>
 
-  <node pkg="robot_pkg" type="footprintToOdom.py" name="footprintToOdom" />
+  <node pkg="camera_pkg" type="new_odom.py" name="new_odom" />
 
   <include file="$(find realsense2_camera)/launch/rs_t265.launch">
     <arg name="camera" value="cam_T"/>
     <arg name="serial_no" value="925122110167"/>
     <arg name="initial_reset" value="true"/>
     <arg name="topic_odom_in" value="odom_wheels"/>
-    <arg name="calib_odom_file" value="$(find create_camera)/config/t256_config.json"/>
+    <arg name="calib_odom_file" value="$(find camera_pkg)/config/t256_config.json"/>
   </include>
 
 

@@ -1,6 +1,6 @@
 <launch>
 
-    <arg name="rviz_cfg"                default="$(find create_rviz)/config/rviz_map.rviz" />
+    <arg name="rviz_cfg"                default="$(find rviz_pkg)/config/rviz_map.rviz" />
 
     <node pkg="rviz" type="rviz" name="rviz" args="-d $(arg rviz_cfg)"/>
     <!-- <node if="$(arg rviz)" pkg="nodelet" type="nodelet" name="points_xyzrgb" args="standalone rtabmap_ros/point_cloud_xyzrgb" output="$(arg output)">

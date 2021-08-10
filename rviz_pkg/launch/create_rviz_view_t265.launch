@@ -1,3 +1,0 @@
-<launch>
-  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find create_rviz)/config/rviz_view_t265.rviz" />
-</launch>

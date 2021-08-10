@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="tf2_ros" type="static_transform_publisher" name="kin01" args="0.23   -0.025    0.554  0.0   0.07  0.0 base_link camera_rgb_frame" />
+	<node pkg="tf2_ros" type="static_transform_publisher" name="kin02" args="0.0   0.0    0.0    0.0   0.0   0.0 camera_rgb_frame camera_depth_frame" />
+
+</launch>

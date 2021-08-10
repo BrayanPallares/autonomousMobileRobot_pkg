@@ -1,10 +1,7 @@
 <launch>
-	
-	<!--node pkg="joy" type ="joy_node" name="joy"/ -->
-	<!--node pkg="robot_pkg" type ="joyToCmd_vel.py" name="joyToCmd_vel"/ -->
 
-	<node pkg="robot_pkg" type ="cmd_velToSerial.py" name="cmd_velToSerial" output="screen">
-		<param name="T265_odom_ena" type="double" value="1"/>
+	<node pkg="robot_pkg" type ="sendCmdVel2Robot.py" name="sendCmdVel2Robot" output="screen">
+		<param name="T265_odom_ena" type="double" value="1.005"/>
 		<remap from="odom" to="odom_wheels"/>
 	</node>
 

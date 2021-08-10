@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="joy" type ="joy_node" name="joy" output="screen"/>
+	<node pkg="robot_pkg" type ="Joy2cmdvel.py" name="Joy2cmdvel" output="screen"/>
+</launch>

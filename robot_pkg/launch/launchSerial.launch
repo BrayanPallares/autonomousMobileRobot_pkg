@@ -1,9 +1,0 @@
-<launch>
-	<node pkg="robot_pkg" type ="cmd_velToSerial.py" name="cmd_velToSerial" output="screen">
-		<param name="T265_odom_ena" type="double" value="1"/>
-		<remap from="odom" to="odom_wheels"/>
-	</node>
-
- 	<node pkg="tf2_ros" type="static_transform_publisher" name="footprint_to_link" args="0.0 0.0 0.076 0 0 0 base_footprint base_link" />
-  	<node pkg="tf2_ros" type="static_transform_publisher" name="link_to_camera" args="0.095 0.0 0.314 0 0 0 base_link camera_link" />
-</launch>
