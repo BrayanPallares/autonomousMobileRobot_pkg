@@ -2,6 +2,25 @@
 
 Conjunto de paquetes de ROS para ejecutar RTAB-Map en el robot omnidireccional de la Universidad Santo Tomás.
 
+#   Instalacion en el PC
+
+[PC] Cree el workspace y clone el repositorio:
+
+``` bash
+mkdir -p ~/ros/autonomousMobileRobot_pkg/src/
+cd ~/ros/autonomousMobileRobot_pkg/src
+git clone https://github.com/BrayanPallares/autonomousMobileRobot_pkg.git
+```
+
+[PC] Compile el workspace:
+
+``` bash
+cd ~/ros/autonomousMobileRobot_pkg/
+catkin_make
+```
+
+
+
 #   Configuracion
 
 Para el control del robot se cuenta con dos computadores, uno a bordo del robot y otro remoto. Ambos computadores deben estar conectados a la misma red y se deben configurar sus variables de ROS de la siguiente forma:
