@@ -260,11 +260,11 @@ roslaunch rviz_pkg rviz_map.launch
 
 Se empezara a crear el mapa a medida que el robot se mueva, se debe ver algo similar a:
 
-![t265_test_BP.png](https://github.com/BrayanPallares/autonomousMobileRobot_pkg/blob/master/img/t265_test_BP.png?raw=true)
+![map1_test.png](https://github.com/BrayanPallares/autonomousMobileRobot_pkg/blob/master/img/map1_test.png?raw=true)
 
 Una vez creado el mapa se puede cerrar el mapeo presionando control + c, esto guardara el mapa en un .db. El mapa completo se debe ver algo asi:
 
-![t265_test_BP.png](https://github.com/BrayanPallares/autonomousMobileRobot_pkg/blob/master/img/t265_test_BP.png?raw=true)
+![map2_test.jpeg](https://github.com/BrayanPallares/autonomousMobileRobot_pkg/blob/master/img/map2_test.jpeg?raw=true)
 
 ## Lanzar localización
 
@@ -294,7 +294,7 @@ roslaunch rviz_pkg rviz_loc.launch
 
 Se debe abrir una ventana con una vista similar a est:
 
-![t265_test_BP.png](https://github.com/BrayanPallares/autonomousMobileRobot_pkg/blob/master/img/t265_test_BP.png?raw=true)
+![loc1_test.png](https://github.com/BrayanPallares/autonomousMobileRobot_pkg/blob/master/img/loc1_test.png?raw=true)
 
 ## Lanzar Navegación
 
@@ -327,4 +327,4 @@ Debe dar click en la parte superior "2D Nav Goal" y seleccionar un punto dentro 
 
 El robot en navegacion se ve en Rviz similar a:
 
-![t265_test_BP.png](https://github.com/BrayanPallares/autonomousMobileRobot_pkg/blob/master/img/t265_test_BP.png?raw=true)
+![nav1_test.jpeg](https://github.com/BrayanPallares/autonomousMobileRobot_pkg/blob/master/img/nav1_test.jpeg?raw=true)
