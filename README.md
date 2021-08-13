@@ -2,9 +2,37 @@
 
 Conjunto de paquetes de ROS para ejecutar RTAB-Map en el robot omnidireccional de la Universidad Santo Tomás.
 
-#   Instalacion en el PC
+Los paquetes pueden ser ejecutados en su totalidad en el computador a bordo del robot o utilizar un segundo computador para controlarlo remotamente. Esta documentacion contempla que el software se ejecutara en un computador a bordo [Robot] y un computador remoto [PC], en caso de que se quiera ejecutar todo en el robot, correr tambien el codigo marcado como [PC].
 
-[PC] Cree el workspace y clone el repositorio:
+La convencion para los computadores involucrados es de la siguiente forma:
+
+* *Robot*: Computador a bordo
+* *PC*: Computador externo
+
+#   Requisitos
+
+Probado con los siguientes computadores a bordo:
+
+* Up Squared - 4GB de RAM - Intel(R) Atom(TM) Processor E3940 @ 1.60GHz
+
+Sistema Operativo:
+
+* Ubuntu 18.04
+* Linux Mint 19.3
+
+Versiones de ROS:
+
+* ROS Melodic
+
+
+Paquetes de ROS:
+
+* rtabmap
+* rtabmap-ros
+
+#   Instalacion
+
+[PC][Robot] Cree el workspace y clone el repositorio:
 
 ``` bash
 mkdir -p ~/ros/autonomousMobileRobot_pkg/src/
@@ -12,7 +40,7 @@ cd ~/ros/autonomousMobileRobot_pkg/src
 git clone https://github.com/BrayanPallares/autonomousMobileRobot_pkg.git
 ```
 
-[PC] Compile el workspace:
+[PC][Robot] Compile el workspace:
 
 ``` bash
 cd ~/ros/autonomousMobileRobot_pkg/
@@ -25,13 +53,13 @@ catkin_make
 
 Para el control del robot se cuenta con dos computadores, uno a bordo del robot y otro remoto. Ambos computadores deben estar conectados a la misma red y se deben configurar sus variables de ROS de la siguiente forma:
 
-Variables de entorno computador abordo:
+[Robot]Variables de entorno computador abordo:
 ``` bash
 export ROS_MASTER_URI=http://<ROBOT_IP>:11311
 export ROS_IP=<ROBOT_IP>
 ```
 
-Variables de entorno computador remoto:
+[PC]Variables de entorno computador remoto:
 ``` bash
 export ROS_MASTER_URI=http://<ROBOT_IP>:11311
 export ROS_IP=<PC_IP>
@@ -41,7 +69,7 @@ export ROS_IP=<PC_IP>
 
 Se necesitan que se haya configurado el *workspace* (Se puede agregar al `~/.bashrc`), tanto en el computador como en el robot:
 ``` bash
-source ~/ros/create_ws/devel/setup.bash
+source ~/ros/autonomousMobileRobot_pkg/devel/setup.bash
 ```
 
 Para iniciar con la ejecucion se debe ejecutar `roscore` en el computador abordo del robot:
