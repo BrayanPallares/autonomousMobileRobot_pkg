@@ -2,9 +2,9 @@
 
 Conjunto de paquetes de ROS para ejecutar RTAB-Map en el robot omnidireccional de la Universidad Santo Tomás.
 
-Los paquetes pueden ser ejecutados en su totalidad en el computador a bordo del robot o utilizar un segundo computador para controlarlo remotamente. Esta documentacion contempla que el software se ejecutara en un computador a bordo [Robot] y un computador remoto [PC], en caso de que se quiera ejecutar todo en el robot, correr tambien el codigo marcado como [PC].
+Los paquetes pueden ser ejecutados en su totalidad en el computador a bordo del robot o utilizar un segundo computador para controlarlo remotamente. Esta documentación contempla que el software se ejecutara en un computador a bordo [Robot] y un computador remoto [PC], en caso de que se quiera ejecutar todo en el robot, correr también el código marcado como [PC] en el Robot.
 
-La convencion para los computadores involucrados es de la siguiente forma:
+La convención para los computadores involucrados es de la siguiente forma:
 
 * *Robot*: Computador a bordo
 * *PC*: Computador externo
@@ -49,7 +49,7 @@ catkin_make
 
 
 
-#   Configuracion
+#   Configuración
 
 Para el control del robot se cuenta con dos computadores, uno a bordo del robot y otro remoto. Ambos computadores deben estar conectados a la misma red y se deben configurar sus variables de ROS de la siguiente forma:
 
@@ -72,7 +72,7 @@ export ROS_IP=<PC_IP>
 source ~/ros/autonomousMobileRobot_pkg/devel/setup.bash
 ```
 
-[Robot] Para iniciar con la ejecucion se debe ejecutar `roscore` en el computador abordo del robot:
+[Robot] Para iniciar con la ejecución se debe ejecutar `roscore` en el computador abordo del robot:
 
 ``` bash
 roscore
@@ -80,15 +80,15 @@ roscore
 
 ## Lanzar movimiento manual del robot
 
-Se debe conectar un controlador Joystick via bluetooth al computador remoto.
+Se debe conectar un controlador Joystick vía bluetooth al computador remoto.
 
-[Robot] Debe ir a la ruta /dev y suministrar permisos de ejecucion al puerto de la tarjeta STM32F4, usualmente identificado como ttyACM1 - ttyACM0.
+[Robot] Debe ir a la ruta /dev y suministrar permisos de ejecución  al puerto de la tarjeta STM32F4, usualmente identificado como ttyACM1 - ttyACM0.
 
 ``` bash
 sudo chmod +777 ttyACM1
 ```
 
-[PC] Lee el contrador Joysctick y genera una velocidad cmd_vel a partir de la informacion de este
+[PC] Lee el contrador Joysctick y genera una velocidad cmd_vel a partir de la información de este
 
 ``` bash
 roslaunch robot_pkg convertJoy2Cmdvel.launch
@@ -111,13 +111,13 @@ buttons: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
 ...
 ```
 
-[Robot] Ejecutar nodo que lee la velocidad cmd_vel y la envia por serial a la tarjeta STM32f *importante: primero se deben suministrar permisos al puerto ttyACM# como se muestra mas arriba*:
+[Robot] Ejecutar nodo que lee la velocidad cmd_vel y la envía por serial a la tarjeta STM32f *importante: primero se deben suministrar permisos al puerto ttyACM# como se muestra más arriba*:
 
 ``` bash
 roslaunch robot_pkg moveRobot.launch
 ```
 
-Debe mostar algo como:
+Debe mostrar algo como:
 
 
 ```
@@ -258,11 +258,11 @@ Debe lanzar Rviz para evidenciar el proceso de mapeo, recuerde que en este modo 
 roslaunch rviz_pkg rviz_map.launch
 ```
 
-Se empezara a crear el mapa a medida que el robot se mueva, se debe ver algo similar a:
+Se empezará a crear el mapa a medida que el robot se mueva, se debe ver algo similar a:
 
 ![map1_test.png](https://github.com/BrayanPallares/autonomousMobileRobot_pkg/blob/master/img/map1_test.png?raw=true)
 
-Una vez creado el mapa se puede cerrar el mapeo presionando control + c, esto guardara el mapa en un .db. El mapa completo se debe ver algo asi:
+Una vez creado el mapa se puede cerrar el mapeo presionando control + c, esto guardara el mapa en un .db. El mapa completo se debe ver algo así:
 
 ![map2_test.jpeg](https://github.com/BrayanPallares/autonomousMobileRobot_pkg/blob/master/img/map2_test.jpeg?raw=true)
 
@@ -274,7 +274,7 @@ Una vez se ha creado un mapa puede lanzar el paquete de localización para ubica
 roslaunch rtabmap_pkg localizationScan.launch 
 ```
 
-Debe mostrar algo asi:
+Debe mostrar algo así:
 
 ```
 ...
@@ -292,7 +292,7 @@ Rviz nos permite ver la localización del robot en el mapa creado.
 roslaunch rviz_pkg rviz_loc.launch 
 ```
 
-Se debe abrir una ventana con una vista similar a est:
+Se debe abrir una ventana con una vista similar a esta:
 
 ![loc1_test.png](https://github.com/BrayanPallares/autonomousMobileRobot_pkg/blob/master/img/loc1_test.png?raw=true)
 
@@ -325,6 +325,6 @@ roslaunch rviz_pkg rviz_navigation.launch
 ```
 Debe dar click en la parte superior "2D Nav Goal" y seleccionar un punto dentro del mapa.
 
-El robot en navegacion se ve en Rviz similar a:
+El robot en navegación se ve en Rviz similar a:
 
 ![nav1_test.jpeg](https://github.com/BrayanPallares/autonomousMobileRobot_pkg/blob/master/img/nav1_test.jpeg?raw=true)
