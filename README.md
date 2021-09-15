@@ -162,7 +162,7 @@ escrito correctamente
 
 [Robot] Se lanza el nodo de la cámara de profundidad:
 ``` bash
-roslaunch camera_pkg camera_d435_scan.launch 
+roslaunch camera_pkg camera_d435.launch 
 ```
 Debe mostrar algo como:
 ```
@@ -224,7 +224,7 @@ Es posible ejecutar *RViz* para confirmar el correcto funcionamiento del nodo:
 
 
 ``` bash
-roslaunch rviz_pkg create_rviz_view_t265.launch
+roslaunch rviz_pkg rviz_view_t265.launch
 ```
 Una vez se confirme el correcto funcionamiento de la cámara se debe cerrar *RViz* para continuar.
 
@@ -236,7 +236,7 @@ Una vez se confirme el correcto funcionamiento de la cámara se debe cerrar *RVi
 Se debe estar ejecutando el paquete del robot y ambas cámaras.
 
 ``` bash
-roslaunch rtabmap_pkg map_scan.launch 
+roslaunch rtabmap_pkg newMap.launch
 ```
 
 Debe mostrar algo como:
@@ -271,7 +271,7 @@ Una vez creado el mapa se puede cerrar el mapeo presionando control + c, esto gu
 Una vez se ha creado un mapa puede lanzar el paquete de localización para ubicar el robot. Recuerde que el mapa es guardado como `~/.ros/rtabmap.db`. Antes de lanzar la localización debe cerrar el mapeo.
 
 ``` bash
-roslaunch rtabmap_pkg localizationScan.launch 
+roslaunch rtabmap_pkg localization.launch
 ```
 
 Debe mostrar algo así:
